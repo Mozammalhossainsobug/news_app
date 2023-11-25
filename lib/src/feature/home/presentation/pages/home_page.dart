@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:news_app/src/feature/home/domain/entities/entities.dart';
 import 'package:news_app/src/feature/home/presentation/riverpod/news_provider.dart';
 import 'package:news_app/src/feature/home/presentation/widgets/all_news_short.dart';
 import 'package:news_app/src/feature/home/presentation/widgets/breaking_news_poster.dart';
@@ -34,15 +32,16 @@ class _HomePageState extends ConsumerState<HomePage> {
         ),
       ),
       extendBodyBehindAppBar: true,
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HomeFontImage(),
-            BreakingNewsPoster(),
+            const HomeFontImage(),
+            const BreakingNewsPoster(),
             SizedBox(
-              height: 500,
-              child: AllNewsShort(),
+              height: size.height * .38,
+              width: size.width,
+              child: const AllNewsShort(),
             ),
           ],
         ),

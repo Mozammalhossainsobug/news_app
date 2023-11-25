@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/src/core/local_services/routes.dart';
 
 class BreakingNewsPoster extends StatelessWidget {
   const BreakingNewsPoster({super.key});
@@ -22,7 +23,9 @@ class BreakingNewsPoster extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.discoveryPage);
+            },
             child: const Text(
               'More',
               style: TextStyle(

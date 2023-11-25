@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:news_app/src/core/netwrok_service/request_handler.dart';
 import 'package:news_app/src/feature/home/data/data_sources/data_source.dart';
 import 'package:news_app/src/feature/home/data/models/wall_street_journal_model.dart';

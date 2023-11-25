@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_app/src/core/local_services/route_generator.dart';
 import 'package:news_app/src/feature/home/presentation/pages/home_page.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
+        onGenerateRoute: RouteGenerator.generateRoute,
         home: const HomePage(),
       ),
     );

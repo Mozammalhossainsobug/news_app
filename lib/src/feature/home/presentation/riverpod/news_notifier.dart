@@ -13,6 +13,10 @@ class NewsNotifier extends Notifier<BaseState> {
       status: BaseStatus.initial,
     );
 
+    state = state.copyWith(
+      status: BaseStatus.loading,
+    );
+
     try {
       final response = await _newsUseCase.wellStreet();
 
