@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:news_app/src/core/local_services/routes.dart';
 import 'package:news_app/src/feature/home/presentation/riverpod/news_provider.dart';
 import 'package:news_app/src/feature/home/presentation/widgets/all_news_short.dart';
 import 'package:news_app/src/feature/home/presentation/widgets/breaking_news_poster.dart';
@@ -47,18 +48,23 @@ class _HomePageState extends ConsumerState<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
         items: [
           BottomNavigationBarItem(
             icon: IconButton(
               padding: const EdgeInsets.all(0),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.homePage);
+              },
               icon: const Icon(Icons.home),
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.discoveryPage);
+              },
               icon: const Icon(Icons.search),
             ),
             label: 'Search',

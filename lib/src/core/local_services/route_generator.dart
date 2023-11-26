@@ -4,6 +4,7 @@ import 'package:news_app/src/core/local_services/routes.dart';
 import 'package:news_app/src/feature/details/presentation/pages/details_news.dart';
 import 'package:news_app/src/feature/discovery/presentation/pages/discovery_page.dart';
 import 'package:news_app/src/feature/home/domain/entities/entities.dart';
+import 'package:news_app/src/feature/home/presentation/pages/home_page.dart';
 
 class RouteGenerator {
   static Route<dynamic>? generateRoute(RouteSettings routeSettings) {
@@ -18,6 +19,11 @@ class RouteGenerator {
       case Routes.discoveryPage:
         return MaterialPageRoute(
           builder: (_) => DiscoveryPage(),
+        );
+
+      case Routes.homePage:
+        return MaterialPageRoute(
+          builder: (_) => const HomePage(),
         );
     }
   }
