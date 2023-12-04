@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:input_form_field/input_form_field.dart';
 import 'package:news_app/src/core/local_services/routes.dart';
+import 'package:news_app/src/core/widget/input_form_field.dart';
 import 'package:news_app/src/feature/discovery/presentation/widgets/discovery_widget.dart';
 
 class DiscoveryPage extends StatefulWidget {
-  DiscoveryPage({Key? key}) : super(key: key);
+  const DiscoveryPage({Key? key}) : super(key: key);
 
   @override
   State<DiscoveryPage> createState() => _DiscoveryPageState();
@@ -27,7 +27,6 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return DefaultTabController(
       initialIndex: 0,
       length: tabs.length,
